@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shakil Mahmud: Legacy ERP modernization, architecture review, .NET and AI automation services</title>
+<meta name="description" content="Fixed-price and monthly services from a senior .NET engineer and certified architecture trainer: architecture review, legacy ERP modernization, SaaS development, AI and n8n automation, and team training. Remote for North American teams.">
+<meta property="og:title" content="Shakil Mahmud: services and pricing">
+<meta property="og:description" content="Architecture review, legacy ERP modernization, .NET development, AI automation and training, with clear scope and prices.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#172d40">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Shakil Mahmud",
+  "description": "Senior .NET engineer, software architect and certified Trainer of Trainers offering architecture review, legacy ERP modernization, SaaS development, AI automation and training.",
+  "areaServed": ["US", "CA", "GB", "AU"],
+  "email": "shakilmahmud012@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Dhaka", "addressCountry": "BD" },
+  "priceRange": "$$"
+}
+</script>
+<style>
+:root{
+  --paper:#f3f6f8; --paper-2:#e9eef2; --white:#ffffff;
+  --ink:#172d40; --muted:#506779; --rule:#c9d4dc;
+  --amber:#e29628; --amber-text:#8f5607; --teal:#168a84; --teal-text:#0d6f6a; --teal-wash:#d6eeec;
+  --serif:"Newsreader", Georgia, "Times New Roman", serif;
+  --sans:"Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --max:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--sans);
+  background-image:linear-gradient(var(--paper-2) 1px,transparent 1px),linear-gradient(90deg,var(--paper-2) 1px,transparent 1px);
+  background-size:28px 28px;background-attachment:fixed}
+a{color:var(--teal-text);text-underline-offset:3px}
+a:hover{color:var(--ink)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:8px 14px;z-index:10}
+.skip:focus{left:8px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+/* header */
+.top{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:20px 0;flex-wrap:wrap}
+.brand{font:600 20px/1 var(--serif);color:var(--ink);text-decoration:none;letter-spacing:.2px}
+.nav{display:flex;gap:22px;flex-wrap:wrap;font-size:15px}
+.nav a{color:var(--ink);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}
+.nav a:hover{border-bottom-color:var(--amber)}
+
+/* buttons */
+.btn{display:inline-block;font:600 16px/1 var(--sans);padding:15px 22px;border-radius:3px;text-decoration:none;border:2px solid var(--ink)}
+.btn-solid{background:var(--ink);color:#fff}
+.btn-solid:hover{background:var(--teal-text);border-color:var(--teal-text);color:#fff}
+.btn-line{background:transparent;color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:#fff}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:48px 0 72px}
+.hero h1{font:600 clamp(38px,5.2vw,62px)/1.06 var(--serif);margin:0 0 22px;letter-spacing:-.5px}
+.hero p.lead{font-size:19px;max-width:34em;margin:0 0 28px;color:var(--ink)}
+.hero .actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+.facts{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px 26px;color:var(--muted);font-size:15px}
+.facts li{padding-left:14px;position:relative}
+.facts li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;background:var(--amber)}
+.diagram{width:100%;height:auto;display:block}
+.diagram text{font-family:var(--sans)}
+
+/* section scaffolding */
+.band{background:var(--white);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+h2{font:600 clamp(28px,3.4vw,40px)/1.12 var(--serif);margin:0 0 14px;letter-spacing:-.3px}
+.intro{max-width:40em;color:var(--muted);margin:0 0 8px}
+
+/* service blocks */
+.service{padding:64px 0;border-top:1px solid var(--rule)}
+.service:first-of-type{border-top:0}
+.service-grid{display:grid;grid-template-columns:300px 1fr;gap:44px}
+.service-side h3{font:600 30px/1.1 var(--serif);margin:0 0 12px}
+.service-side p{margin:0 0 14px;color:var(--ink)}
+.service-side .fit{color:var(--muted);font-size:15px;border-left:3px solid var(--amber);padding-left:12px}
+.service-side .fit strong{color:var(--ink)}
+
+/* price sheet */
+table.sheet{width:100%;border-collapse:collapse;background:var(--white);border:1.5px solid var(--ink)}
+.sheet caption{position:absolute;left:-999px}
+.sheet th,.sheet td{text-align:left;vertical-align:top;padding:20px 18px;border-bottom:1px solid var(--rule)}
+.sheet thead th{background:var(--ink);color:#fff;font:600 14px/1.2 var(--sans);padding:12px 18px}
+.sheet tbody tr:last-child td,.sheet tbody tr:last-child th{border-bottom:0}
+.sheet th[scope=row]{width:19%;font:600 18px/1.25 var(--serif)}
+.sheet .name small{display:block;font:400 14px/1.4 var(--sans);color:var(--muted);margin-top:6px}
+.sheet td.inc{width:43%}
+.sheet ul{margin:0;padding:0;list-style:none}
+.sheet li{position:relative;padding-left:20px;margin:0 0 7px;font-size:15.5px;line-height:1.5}
+.sheet li:last-child{margin-bottom:0}
+.sheet li::before{content:"";position:absolute;left:2px;top:.5em;width:9px;height:5px;border-left:2px solid var(--teal);border-bottom:2px solid var(--teal);transform:rotate(-45deg)}
+.sheet td.time{width:15%;font-size:15px;color:var(--muted)}
+.sheet td.cost{width:23%}
+.price{font:600 28px/1.05 var(--serif);display:block}
+.price span{font:500 14px/1.3 var(--sans);color:var(--muted)}
+.ask{display:inline-block;margin-top:12px;white-space:nowrap;font-size:14.5px;font-weight:600}
+.sheet tr.pick{background:var(--teal-wash)}
+.sheet tr.pick th[scope=row]::after{content:"Recommended";display:inline-block;margin-top:8px;font:600 12.5px/1 var(--sans);background:var(--amber);color:var(--ink);padding:5px 8px;border-radius:2px}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:34px 0 0;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;padding:0 22px 0 0;position:relative}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--ink);color:#fff;font:600 17px/1 var(--serif);margin-bottom:16px}
+.steps li:not(:last-child)::after{content:"";position:absolute;top:19px;left:48px;right:10px;height:2px;background:var(--rule)}
+.steps h3{font:600 20px/1.2 var(--serif);margin:0 0 8px}
+.steps p{margin:0;font-size:15.5px;color:var(--muted)}
+
+/* terms */
+.terms{display:grid;grid-template-columns:repeat(2,1fr);gap:34px 56px;margin-top:30px}
+.terms h3{font:600 20px/1.2 var(--serif);margin:0 0 8px}
+.terms p{margin:0;color:var(--muted);font-size:16px}
+
+/* credentials */
+.cred{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
+.cred a{display:block;background:var(--paper);border:1.5px solid var(--teal);padding:14px 18px;text-decoration:none;color:var(--ink);font-weight:600;font-size:15.5px;max-width:330px}
+.cred a small{display:block;font-weight:400;color:var(--muted);font-size:13.5px;margin-top:3px}
+.cred a:hover{background:var(--teal-wash)}
+
+/* contact */
+.contact{padding:72px 0 64px}
+.contact .box{background:var(--ink);color:#fff;padding:48px;display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:center}
+.contact h2{color:#fff;margin-bottom:12px}
+.contact p{margin:0;color:#d5e0e8}
+.contact .btn-solid{background:var(--amber);border-color:var(--amber);color:var(--ink)}
+.contact .btn-solid:hover{background:#fff;border-color:#fff;color:var(--ink)}
+.contact .alt{margin-top:14px;font-size:15px}
+.contact .alt a{color:#fff}
+footer{padding:0 0 40px;color:var(--muted);font-size:14.5px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* responsive */
+@media (max-width:960px){
+  .hero{grid-template-columns:1fr;gap:36px;padding-top:24px}
+  .service-grid{grid-template-columns:1fr;gap:26px}
+  .steps{grid-template-columns:1fr 1fr;gap:34px 0}
+  .steps li:not(:last-child)::after{display:none}
+  .contact .box{grid-template-columns:1fr;padding:34px 26px}
+  .terms{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .sheet,.sheet tbody,.sheet tr,.sheet th,.sheet td{display:block;width:100%}
+  .sheet thead{position:absolute;left:-999px}
+  .sheet tr{border-bottom:1.5px solid var(--ink);padding:6px 0}
+  .sheet tr:last-child{border-bottom:0}
+  .sheet th,.sheet td{border-bottom:0;padding:10px 18px}
+  .sheet th[scope=row],.sheet td.inc,.sheet td.time,.sheet td.cost{width:100%}
+  .sheet td.time::before{content:"Time: ";font-weight:600;color:var(--ink)}
+}
+@media (max-width:520px){
+  body{font-size:16px}
+  .steps{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#services">Skip to services</a>
+
+<header class="wrap top">
+  <a class="brand" href="#top">Shakil Mahmud</a>
+  <nav class="nav" aria-label="Sections">
+    <a href="#architecture">Architecture review</a>
+    <a href="#legacy">Legacy ERP</a>
+    <a href="#build">Development</a>
+    <a href="#ai">AI automation</a>
+    <a href="#training">Training</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="wrap hero" aria-labelledby="h1">
+    <div>
+      <h1 id="h1">Modernize the system. Keep the business running.</h1>
+      <p class="lead">I’m a senior .NET engineer and certified architecture trainer. I review, modernize and extend enterprise systems for teams in North America and other English-speaking markets, with fixed prices where the scope is clear and monthly plans where it isn’t.</p>
+      <div class="actions">
+        <a class="btn btn-solid" href="#services">See services and prices</a>
+        <a class="btn btn-line" href="mailto:shakilmahmud012@gmail.com?subject=Project%20inquiry">Describe your system</a>
+      </div>
+      <ul class="facts">
+        <li>6 years building enterprise ERP and SaaS</li>
+        <li>Remote from Dhaka, Bangladesh</li>
+        <li>All prices in US dollars</li>
+      </ul>
+    </div>
+
+    <svg class="diagram" viewBox="0 0 560 360" role="img" aria-label="Diagram: a tangled legacy system is moved in three stages to a clean layered modern system while production stays live.">
+      <g stroke="#9c9082" stroke-width="1.2" fill="none">
+        <path d="M205 62 H222 V150 H205"/><path d="M200 102 H226 V190 H200"/><path d="M208 142 H218 V62"/><path d="M204 182 H230 V102 H204"/><path d="M198 222 H222 V142"/>
+      </g>
+      <g font-size="13" fill="#172d40">
+        <rect x="20" y="46" width="184" height="32" fill="#ddd6cc" stroke="#9c9082"/><text x="30" y="67">WebForms pages</text>
+        <rect x="27" y="86" width="180" height="32" fill="#ddd6cc" stroke="#9c9082"/><text x="37" y="107">Stored procedures</text>
+        <rect x="16" y="126" width="184" height="32" fill="#ddd6cc" stroke="#9c9082"/><text x="26" y="147">RDLC reports</text>
+        <rect x="29" y="166" width="178" height="32" fill="#ddd6cc" stroke="#9c9082"/><text x="39" y="187">Rules buried in code</text>
+        <rect x="18" y="206" width="182" height="32" fill="#ddd6cc" stroke="#9c9082"/><text x="28" y="227">One shared database</text>
+      </g>
+      <g>
+        <polygon points="20,262 92,262 108,282 92,302 20,302" fill="#ecb07a"/>
+        <polygon points="104,262 176,262 192,282 176,302 104,302 120,282" fill="#e29628"/>
+        <polygon points="188,262 260,262 276,282 260,302 188,302 204,282" fill="#168a84"/>
+        <g font-size="13" font-weight="600" text-anchor="middle">
+          <text x="58" y="287" fill="#172d40">Wrap</text><text x="148" y="287" fill="#172d40">Extract</text><text x="232" y="287" fill="#fff">Replace</text>
+        </g>
+      </g>
+      <g fill="#d6eeec" stroke="#168a84" stroke-width="2">
+        <rect x="318" y="46" width="222" height="40"/><rect x="318" y="96" width="222" height="40"/><rect x="318" y="146" width="222" height="40"/><rect x="318" y="196" width="222" height="40"/>
+      </g>
+      <g font-size="13.5" font-weight="600" fill="#172d40">
+        <text x="332" y="71">Web API</text><text x="332" y="121">Application: CQRS</text><text x="332" y="171">Domain model</text><text x="332" y="221">Data: MSSQL, pgvector</text>
+      </g>
+      <path d="M20 334 H524" stroke="#168a84" stroke-width="3"/><polygon points="524,327 540,334 524,341" fill="#168a84"/>
+      <text x="280" y="324" font-size="13" font-weight="600" fill="#0d6f6a" text-anchor="middle">Production stays live at every step</text>
+      <text x="112" y="30" font-size="13" fill="#506779" text-anchor="middle">Before</text>
+      <text x="429" y="30" font-size="13" fill="#506779" text-anchor="middle">After</text>
+    </svg>
+  </section>
+
+  <div class="band" id="services">
+    <div class="wrap">
+
+      <!-- 1 ARCHITECTURE REVIEW -->
+      <section class="service" id="architecture" aria-labelledby="s1">
+        <div class="service-grid">
+          <div class="service-side">
+            <h3 id="s1">Architecture review</h3>
+            <p>An independent look at a system you’re planning or already run, ending in written decisions your team can act on.</p>
+            <p class="fit"><strong>Good fit if</strong> you’re about to commit to a design, inherited a system nobody fully understands, or need a second opinion before a big spend.</p>
+          </div>
+          <table class="sheet">
+            <caption>Architecture review packages and prices</caption>
+            <thead><tr><th scope="col">Package</th><th scope="col">What’s included</th><th scope="col">Time</th><th scope="col">Price</th></tr></thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="name">Focused review<small>One module or one decision</small></th>
+                <td class="inc"><ul>
+                  <li>Review of the requirements, code and data for that area</li>
+                  <li>Quality attribute scenarios and trade-off write-up</li>
+                  <li>Clear recommendation with reasons</li>
+                  <li>60-minute walkthrough call</li>
+                </ul></td>
+                <td class="time">About 1 week</td>
+                <td class="cost"><span class="price">$900</span><a class="ask" href="mailto:shakilmahmud012@gmail.com?subject=Inquiry%3A%20Focused%20architecture%20review">Ask about this</a></td>
+              </tr>
+              <tr class="pick">
+                <th scope="row" class="name">Full system review<small>The whole system</small></th>
+                <td class="inc"><ul>
+                  <li>Everything in the focused review, across the full system</li>
+                  <li>UML views: components, deployment and key sequences</li>
+                  <li>Risks and sensitivity points, ATAM style</li>
+                  <li>Decision records and a prioritized roadmap</li>
+                  <li>Two walkthrough calls</li>
+                </ul></td>
+                <td class="time">2 to 3 weeks</td>
+                <td class="cost"><span class="price">$2,400</span><a class="ask" href="mailto:shakilmahmud012@gmail.com?subject=Inquiry%3A%20Full%20system%20architecture%20review">Ask about this</a></td>
+              </tr>
+              <tr>
+                <th scope="row" class="name">Design for a new build<small>Before the first line of code</small></th>
+                <td class="inc"><ul>
+                  <li>Requirements sessions (functional and non-functional)</li>
+                  <li>Architecture design with patterns matched to your priorities</li>
+                  <li>UML set, stack recommendation and delivery plan</li>
+                  <li>Effort ranges for each phase</li>
+                </ul></td>
+                <td class="time">3 to 4 weeks</td>
+                <td class="cost"><span class="price">$4,200</span><a class="ask" href="mailto:shakilmahmud012@gmail.com?subject=Inquiry%3A%20Architecture%20design%20for%20a%20new%20build">Ask about this</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 2 LEGACY ERP -->
+      <section class="service" id="legacy" aria-labelledby="s2">
+        <div class="service-grid">
+          <div class="service-side">
+            <h3 id="s2">Legacy ERP modernization</h3>
+            <p>Move a long-running .NET system forward in stages, without a big-bang rewrite and without stopping the people who use it every day.</p>
+            <p class="fit"><strong>Good fit if</strong> your ERP still runs the business but releases are risky, reports are fragile, and few people understand the code.</p>
+          </div>
+          <table class="sheet">
+            <caption>Legacy ERP modernization packages and prices</caption>
+            <thead><tr><th scope="col">Package</th><th scope="col">What’s included</th><th scope="col">Time</th><th scope="col">Price</th></tr></thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="name">Legacy health check<small>Read-only assessment</small></th>
+                <td class="inc"><ul>
+                  <li>Survey of code, database, reports and deployment</li>
+                  <li>Risk map and the business rules found in code</li>
+                  <li>Modernization options with effort ranges</li>
+                  <li>Written report and a walkthrough call</li>
+                </ul></td>
+                <td class="time">1 to 2 weeks</td>
+                <td class="cost"><span class="price">$1,200</span><a class="ask" href="mailto:shakilmahmud012@gmail.com?subject=Inquiry%3A%20Legacy%20health%20check">Ask about this</a></td>
+              </tr>
+              <tr class="pick">
+                <th scope="row" class="name">Stabilize and support<small>Monthly, about 60 hours</small></th>
+                <td class="inc"><ul>
+                  <li>Defect fixes and performance work from a shared priority list</li>
+                  <li>Safer deployments, logging and monitoring where you’re blind</li>
+                  <li>Business rules written down as I find them</li>
+                  <li>Weekly status call and written update</li>
+                </ul></td>
+                <td class="time">Monthly, 30 days’ notice</td>
+                <td class="cost"><span class="price">$2,600<span> / month</span></span><a class="ask" href="mailto:shakilmahmud012@gmail.com?subject=Inquiry%3A%20Legacy%20stabilize%20and%20support">Ask about this</a></td>
+              </tr>
+              <tr>
+                <th scope="row" class="name">Module modernization<small>One module at a time</small></th>
+                <td class="inc"><ul>
+                  <li>Web API around the existing logic, with tests</li>
+                  <li>Move to modern .NET and Clean Architecture</li>
+                  <li>Parallel run and a planned cutover</li>
+                  <li>Handover documentation</li>
+                </ul></td>
+                <td class="time">4 to 8 weeks</td>
+                <td class="cost"><span class="price">From $4,500<span> / module</span></span><a class="ask" href="mailto:shakilmahmud012@gmail.com?subject=Inquiry%3A%20Legacy%20module%20modernization">Ask about this</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 3 DEVELOPMENT -->
+      <section class="service" id="build" aria-labelledby="s3">
+        <div class="service-grid">
+          <div class="service-side">
+            <h3 id="s3">SaaS and enterprise development</h3>
+            <p>A senior .NET engineer working inside your team or alongside it, building features, APIs and multi-module platforms.</p>
+            <p class="fit"><strong>Good fit if</strong> you have a roadmap and need dependable delivery, not just extra hands.</p>
+          </div>
+          <table class="sheet">
+            <caption>Development engagement options and prices</caption>
+            <thead><tr><th scope="col">Engagement</th><th scope="col">What’s included</th><th scope="col">Time</th><th scope="col">Price</th></tr></thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="name">Hourly<small>Small tasks and features</small></th>
+                <td class="inc"><ul>
+                  <li>Features, fixes and API work in C#, .NET, EF and SQL</li>
+                  <li>Billed weekly against hours logged</li>
+                  <li>Minimum 10 hours to start</li>
+                </ul></td>
+                <td class="time">Flexible</td>
+                <td class="cost"><span class="price">$45<span> / hour</span></span><a class="ask" href="mailto:shakilmahmud012@gmail.com?subject=Inquiry%3A%20Hourly%20development">Ask about this</a></td>
+              </tr>
+              <tr class="pick">
+                <th scope="row" class="name">Part-time<small>About 80 hours a month</small></th>
+                <td class="inc"><ul>
+                  <li>Steady capacity on your backlog</li>
+                  <li>Clean Architecture, CQRS and MediatR where they fit</li>
+                  <li>Code reviews and written design notes</li>
+                  <li>Weekly demo and planning call</li>
+                </ul></td>
+                <td class="time">Monthly, 30 days’ notice</td>
+                <td class="cost"><span class="price">$3,400<span> / month</span></span><a class="ask" href="mailto:shakilmahmud012@gmail.com?subject=Inquiry%3A%20Part-time%20development">Ask about this</a></td>
+              </tr>
+              <tr>
+                <th scope="row" class="name">Full-time<small>About 160 hours a month</small></th>
+                <td class="inc"><ul>
+                  <li>Embedded in your team, using your tools and process</li>
+                  <li>Ownership of modules from design to release</li>
+                  <li>Documentation kept current as the work lands</li>
+                  <li>Lower effective hourly rate than part-time</li>
+                </ul></td>
+                <td class="time">Monthly, 30 days’ notice</td>
+                <td class="cost"><span class="price">$6,400<span> / month</span></span><a class="ask" href="mailto:shakilmahmud012@gmail.com?subject=Inquiry%3A%20Full-time%20development">Ask about this</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 4 AI -->
+      <section class="service" id="ai" aria-labelledby="s4">
+        <div class="service-grid">
+          <div class="service-side">
+            <h3 id="s4">AI and workflow automation</h3>
+            <p>Add retrieval, agents and automation on top of the systems you already run, so nothing has to be replaced first.</p>
+            <p class="fit"><strong>Good fit if</strong> your team spends hours searching documents, screening applications, or answering the same support questions.</p>
+          </div>
+          <table class="sheet">
+            <caption>AI and automation packages and prices</caption>
+            <thead><tr><th scope="col">Package</th><th scope="col">What’s included</th><th scope="col">Time</th><th scope="col">Price</th></tr></thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="name">Automation sprint<small>One n8n workflow</small></th>
+                <td class="inc"><ul>
+                  <li>One workflow connecting up to two of your systems</li>
+                  <li>Error handling, testing and alerts</li>
+                  <li>Handover notes so your team can maintain it</li>
+                </ul></td>
+                <td class="time">About 1 week</td>
+                <td class="cost"><span class="price">$900</span><a class="ask" href="mailto:shakilmahmud012@gmail.com?subject=Inquiry%3A%20Automation%20sprint">Ask about this</a></td>
+              </tr>
+              <tr class="pick">
+                <th scope="row" class="name">Knowledge base (RAG)<small>Ask questions of your documents</small></th>
+                <td class="inc"><ul>
+                  <li>Your documents ingested into a pgvector store</li>
+                  <li>Question and answer interface or API, with sources shown</li>
+                  <li>A test set to check answer quality</li>
+                  <li>Deployed and documented</li>
+                </ul></td>
+                <td class="time">2 to 3 weeks</td>
+                <td class="cost"><span class="price">$2,800</span><a class="ask" href="mailto:shakilmahmud012@gmail.com?subject=Inquiry%3A%20RAG%20knowledge%20base">Ask about this</a></td>
+              </tr>
+              <tr>
+                <th scope="row" class="name">Custom agent workflow<small>CV screening, support triage and similar</small></th>
+                <td class="inc"><ul>
+                  <li>An agent with tools (MCP) connected to your system</li>
+                  <li>Human approval steps where the stakes are high</li>
+                  <li>Logging so every action can be reviewed</li>
+                  <li>Training session for your team</li>
+                </ul></td>
+                <td class="time">3 to 5 weeks</td>
+                <td class="cost"><span class="price">From $4,800</span><a class="ask" href="mailto:shakilmahmud012@gmail.com?subject=Inquiry%3A%20Custom%20agent%20workflow">Ask about this</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 5 TRAINING -->
+      <section class="service" id="training" aria-labelledby="s5">
+        <div class="service-grid">
+          <div class="service-side">
+            <h3 id="s5">Architecture and UML training</h3>
+            <p>Live online workshops for engineering teams, delivered by a certified Trainer of Trainers.</p>
+            <p class="fit"><strong>Good fit if</strong> your team builds well but design decisions are made ad hoc and never written down.</p>
+          </div>
+          <table class="sheet">
+            <caption>Training options and prices</caption>
+            <thead><tr><th scope="col">Format</th><th scope="col">What’s included</th><th scope="col">Time</th><th scope="col">Price</th></tr></thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="name">Workshop day<small>Up to 12 people</small></th>
+                <td class="inc"><ul>
+                  <li>One topic: UML modeling, quality attributes or design trade-offs</li>
+                  <li>Exercises built on a case from your own domain</li>
+                  <li>Slides and exercise files to keep</li>
+                </ul></td>
+                <td class="time">1 day, online</td>
+                <td class="cost"><span class="price">$1,000</span><a class="ask" href="mailto:shakilmahmud012@gmail.com?subject=Inquiry%3A%20Training%20workshop%20day">Ask about this</a></td>
+              </tr>
+              <tr>
+                <th scope="row" class="name">Multi-day course<small>Architecture design and evaluation</small></th>
+                <td class="inc"><ul>
+                  <li>Requirements, design and evaluation, taught in sequence</li>
+                  <li>Team project reviewed with feedback</li>
+                  <li>Course materials and a follow-up Q and A session</li>
+                </ul></td>
+                <td class="time">3 days, online</td>
+                <td class="cost"><span class="price">From $2,700</span><a class="ask" href="mailto:shakilmahmud012@gmail.com?subject=Inquiry%3A%20Multi-day%20architecture%20course">Ask about this</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <section class="wrap" style="padding:72px 24px 24px" aria-labelledby="how">
+    <h2 id="how">How an engagement runs</h2>
+    <p class="intro">The same four steps apply whether it’s a $900 review or a monthly retainer.</p>
+    <ol class="steps">
+      <li><h3>Brief</h3><p>You describe the system and the problem in a message or a 30-minute call. No charge.</p></li>
+      <li><h3>Proposal</h3><p>Within two working days you get scope, price and timeline in writing.</p></li>
+      <li><h3>Work</h3><p>Regular written updates and a weekly call. You see progress before you see an invoice.</p></li>
+      <li><h3>Handover</h3><p>Deliverables, documentation and a walkthrough, so your team can carry on without me.</p></li>
+    </ol>
+  </section>
+
+  <section class="wrap" style="padding:56px 24px 72px" aria-labelledby="terms">
+    <h2 id="terms">Terms in plain language</h2>
+    <div class="terms">
+      <div><h3>Payment</h3><p>Fixed-price work is paid 50% to start and 50% on delivery. Packages over $2,000 can be split into milestones. Monthly plans are invoiced at the start of each month, and hourly work weekly.</p></div>
+      <div><h3>Scope and changes</h3><p>Prices cover the scope described. If the work turns out larger, I tell you before spending the extra time and you decide. One round of revisions is included within 14 days of delivery.</p></div>
+      <div><h3>Confidentiality</h3><p>Your code, data and business rules stay yours. I’m happy to sign an NDA before we talk specifics.</p></div>
+      <div><h3>Working across time zones</h3><p>I’m based in Dhaka. We agree a standing weekly call that suits your time zone, and everything else runs in writing so nobody waits on a meeting.</p></div>
+    </div>
+  </section>
+
+  <div class="band">
+    <section class="wrap" style="padding:64px 24px" aria-labelledby="cred">
+      <h2 id="cred">Credentials you can check</h2>
+      <p class="intro">Certified Trainer of Trainers, issued under JICA, BASIS, BCC and NII. Each credential has a public verification page.</p>
+      <div class="cred">
+        <a href="https://wallet.openbadge.net/public/credential/0b4cb3fc-a767-8612-877c-019c047dd382" rel="noopener">Architecture I, Certified Trainer<small>Verify credential</small></a>
+        <a href="https://wallet.openbadge.net/public/credential/9f1e6fcf-55a5-8a91-912e-01a13e9ed340" rel="noopener">Architecture II (Advanced), Trainer of Trainers<small>Verify credential</small></a>
+        <a href="https://wallet.openbadge.net/public/credential/a69d9fa7-7e3a-884f-8cb1-019c8e6324e1" rel="noopener">Cloud and Distributed Systems, Certified Trainer<small>Verify credential</small></a>
+      </div>
+      <p class="intro" style="margin-top:22px">Work history and projects are on my <a href="https://shakiler001.github.io/shakil-resume/">resume page</a>, and code is on <a href="https://github.com/shakiler001">GitHub</a>.</p>
+    </section>
+  </div>
+
+  <section class="wrap contact" id="contact" aria-labelledby="c">
+    <div class="box">
+      <div>
+        <h2 id="c">Tell me about your system</h2>
+        <p>Two or three sentences is enough: what it does, what’s hurting, and what you’d like to change. I reply within one working day with next steps.</p>
+      </div>
+      <div>
+        <a class="btn btn-solid" href="mailto:shakilmahmud012@gmail.com?subject=Project%20inquiry&amp;body=What%20the%20system%20does%3A%0A%0AWhat%20is%20hurting%3A%0A%0AWhat%20I%20want%20to%20change%3A%0A%0ATime%20zone%3A">Send a message</a>
+        <p class="alt">Or write to <a href="mailto:shakilmahmud012@gmail.com">shakilmahmud012@gmail.com</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <span>Shakil Mahmud, Dhaka, Bangladesh</span>
+  <span>Prices in US dollars and valid for new engagements.</span>
+</footer>
+</body>
+</html>
