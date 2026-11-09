@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Shakil Mahmud: take your AI-built app from demo to production</title>
-<meta name="description" content="Senior engineer for founders whose app was built with Lovable, Bolt, Replit, v0, Cursor or Bubble. Readiness checks, hardening sprints and platform exits, at fixed prices. You keep all the code.">
+<title>Shakil Mahmud: make your AI-built app safe for real customers</title>
+<meta name="description" content="Built your app with Lovable, Bolt, Replit or Bubble? A senior engineer checks it, fixes what could hurt your business and makes sure you own it. Plain-English reports, fixed prices.">
 <link rel="canonical" href="https://shakiler001.github.io/ai-apps/">
 <meta name="theme-color" content="#172d40">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Your AI-built app works in the demo. Make it ready for real users.">
-<meta property="og:description" content="Readiness checks, hardening sprints and platform exits for apps built with Lovable, Bolt, Replit, v0, Cursor or Bubble. Fixed prices. You keep all the code.">
+<meta property="og:title" content="You built your app with AI. Is it ready for real customers?">
+<meta property="og:description" content="Health check, fixes and a way to own your app. Plain-English reports and fixed prices for founders who built with Lovable, Bolt, Replit or Bubble.">
 <meta property="og:url" content="https://shakiler001.github.io/ai-apps/">
 <meta property="og:image" content="https://shakiler001.github.io/ai-apps/preview.png">
 <meta property="og:image:width" content="1200">
@@ -143,7 +143,36 @@ tbody tr.rec{background:var(--teal-wash)}
 .mailline button{background:none;border:0;color:#fff;font:inherit;text-decoration:underline;text-underline-offset:3px;cursor:pointer;padding:0}
 footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:13.5px;color:var(--muted);padding:0 0 40px}
 
+
+/* risks and FAQ (plain-language version) */
+.risks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:36px}
+.risk{background:var(--paper);border:1px solid var(--ink);padding:22px 22px 20px;display:flex;flex-direction:column;gap:10px}
+.risk h3{font-size:22px;line-height:1.2}
+.risk .looks{font-size:15.5px;color:var(--ink)}
+.risk .cost{font-size:14.5px;color:var(--muted);border-top:1px solid var(--rule);padding-top:10px;margin-top:auto}
+.risk .cost b{color:var(--amber-text)}
+.faq{margin-top:28px;display:grid;gap:10px;max-width:820px}
+.faq details{background:var(--paper);border:1px solid var(--rule);padding:0 20px}
+.faq details[open]{border-color:var(--ink)}
+.faq summary{cursor:pointer;font-family:var(--serif);font-weight:600;font-size:20px;padding:16px 0;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--sans);color:var(--teal-text);font-weight:600}
+.faq details[open] summary::after{content:"\2212"}
+.faq details p{padding:0 0 18px;color:var(--muted);font-size:16px;max-width:68ch}
+.panel .label{line-height:1.4}
+
+/* sticky top bar and back-to-top */
+html{scroll-padding-top:84px}
+.topbar{position:sticky;top:0;z-index:30;background:var(--paper);border-bottom:1px solid transparent;transition:border-color .2s}
+.topbar.scrolled{border-bottom-color:var(--rule);box-shadow:0 6px 0 rgba(233,238,242,.7)}
+.topbar .nav{padding:16px 0}
+.totop{position:fixed;right:max(20px,env(safe-area-inset-right,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:40;width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:var(--ink);color:#fff;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--amber);text-decoration:none;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s}
+.totop.show{opacity:1;visibility:visible;transform:none}
+.totop:hover{background:#0f2131;color:#fff}
+@media (prefers-reduced-motion:reduce){.topbar,.totop{transition:none}}
+
 @media (max-width:900px){
+  .risks{grid-template-columns:repeat(2,minmax(0,1fr))}
   .hero{grid-template-columns:1fr;gap:36px;padding-top:16px}
   .service{grid-template-columns:1fr;gap:20px}
   .signs{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -153,158 +182,190 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-s
 }
 @media (max-width:560px){
   .wrap{padding:0 16px}
-  .signs,.howto,.terms{grid-template-columns:1fr}
+  .signs,.howto,.terms,.risks{grid-template-columns:1fr}
   .nav ul{gap:4px 16px;font-size:14px}
+  .topbar .nav{flex-wrap:nowrap;gap:14px;padding:12px 0}
+  .topbar .nav ul{flex-wrap:nowrap;overflow-x:auto;white-space:nowrap;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding-bottom:2px}
+  .topbar .nav ul::-webkit-scrollbar{display:none}
+  .brand{flex:none;font-size:18px}
+  html{scroll-padding-top:64px}
   .section{padding-block:52px}
 }
 </style>
 </head>
 <body id="top">
-<a class="skip" href="#services">Skip to services</a>
+<a class="skip" href="#risks">Skip to the risks</a>
 
-<div class="wrap">
+<div class="topbar" id="topbar">
+  <div class="wrap">
   <nav class="nav" aria-label="Main">
     <a class="brand" href="#top">Shakil Mahmud</a>
     <ul>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#how">How it works</a></li>
-      <li><a href="#cred">Credentials</a></li>
+      <li><a href="#risks">Where apps fail</a></li>
+      <li><a href="#services">What I do</a></li>
+      <li><a href="#faq">Questions</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="https://shakiler001.github.io/services/">All services</a></li>
       <li><a href="https://wa.me/8801743601756">WhatsApp</a></li>
     </ul>
   </nav>
+  </div>
+</div>
+
+<div class="wrap">
+  
 
   <header class="hero">
     <div>
-      <h1>Your AI-built app works in the demo. Let's make it ready for real users.</h1>
-      <p class="lede">You built it fast with Lovable, Bolt, Replit, v0, Cursor or Bubble. Now fixes break other things, the AI can't keep the whole app in its head, and real customers are about to sign up. I'm a senior engineer who checks what you have, fixes what's risky and makes sure you own the result.</p>
+      <h1>You built your app with AI. Is it ready for real customers?</h1>
+      <p class="lede">Lovable, Bolt, Replit and Bubble take you from idea to working app in days. That's a real achievement. But an app that impresses in a demo and an app that holds customers' money and data need different things. I'm a senior software engineer. I check what's under the surface, fix what could hurt your business, and make sure the app is really yours.</p>
       <div class="ctas">
-        <a class="btn btn-primary" href="#services">See the three services</a>
-        <a class="btn btn-ghost js-mail" href="mailto:shakilmahmud012@gmail.com?subject=AI-built%20app%20review&amp;body=App%20link%3A%20%0ABuilt%20with%3A%20%0AWhat%20it%20does%3A%20%0AWhat%20worries%20me%3A%20">Describe your app</a>
+        <a class="btn btn-primary" href="#risks">See where apps fail</a>
+        <a class="btn btn-ghost js-mail" href="mailto:shakilmahmud012@gmail.com?subject=AI-built%20app%20check&amp;body=App%20link%3A%20%0ABuilt%20with%3A%20%0AWhat%20it%20does%3A%20%0AWhat%20worries%20me%3A%20">Tell me about your app</a>
         <a class="btn btn-ghost" href="https://wa.me/8801743601756"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.3z"/><path d="M9 8.5c0 3.5 2.6 6.5 6.5 6.5l1-1.6-2-1-1 1c-1.2-.4-2.4-1.6-2.8-2.8l1-1-1-2L9 8.5z"/></svg>Chat on WhatsApp</a>
       </div>
       <ul class="trust">
-        <li>6+ years building production ERP and SaaS systems</li>
+        <li>6+ years building business software used every day</li>
         <li>JICA-certified Software Architecture Trainer</li>
+        <li>Plain-English reports, no jargon</li>
         <li>You keep all code, data and accounts</li>
-        <li>Fixed quote in writing within two working days</li>
       </ul>
     </div>
 
-    <aside class="panel" aria-label="At a glance">
-      <div class="label">Built with</div>
-      <div class="tools"><span>Lovable</span><span>Bolt</span><span>Replit</span><span>v0</span><span>Cursor</span><span>Bubble</span></div>
-      <div class="label" style="margin-top:22px">What usually needs fixing</div>
+    <aside class="panel" aria-label="Four questions">
+      <div class="label">Four questions I ask about every AI-built app</div>
       <ul class="probs">
-        <li><span>01</span>Pages and APIs that skip permission checks</li>
-        <li><span>02</span>Database rules that let one user read another's data</li>
-        <li><span>03</span>Keys and secrets sitting in the code</li>
-        <li><span>04</span>No tests on sign-up and payments</li>
+        <li><span>01</span>Can one customer see another customer's data?</li>
+        <li><span>02</span>If the platform changes its prices or rules, what happens to your business?</li>
+        <li><span>03</span>If your data is wiped tonight, can you get it back?</li>
+        <li><span>04</span>Will it hold up when hundreds of people sign up on launch day?</li>
       </ul>
-      <div class="steps" aria-hidden="true"><div>Check</div><div>Harden</div><div>Own it</div></div>
-      <p class="note">Your app keeps running while it gets safer.</p>
+      <p class="note" style="margin-top:18px">If you can't answer all four with a confident yes, start with a health check.</p>
     </aside>
   </header>
 </div>
 
-<section class="band">
+<section class="band" id="risks">
   <div class="wrap section">
-    <h2>Sound familiar?</h2>
-    <p class="intro">These are the moments when an AI-built app needs an engineer. Most founders hit two or three of them at once.</p>
-    <div class="signs">
-      <div class="sign"><b>Every fix breaks something else</b><p>And most of your credits now go on repairs, not new features.</p></div>
-      <div class="sign"><b>The AI lost track of your app</b><p>It's grown past what the tool can hold, so changes get slower and riskier.</p></div>
-      <div class="sign"><b>Real users are about to arrive</b><p>Sign-ups, payments and customer data change what "working" means.</p></div>
-      <div class="sign"><b>Someone asked about security</b><p>A first business customer, an investor or a partner wants to know who checked it.</p></div>
-      <div class="sign"><b>The platform is in the way</b><p>Costs, limits or missing features block the next step on your roadmap.</p></div>
-      <div class="sign"><b>You want to own it outright</b><p>Your code, your database and your hosting, with nothing you can't move.</p></div>
+    <h2>Where AI-built apps usually fail</h2>
+    <p class="intro">None of these show up in a demo. All of them show up once real people use the app.</p>
+    <div class="risks">
+      <article class="risk">
+        <h3>Customers can see each other's data</h3>
+        <p class="looks">A user changes one number in the web address and sees someone else's orders, messages or invoices.</p>
+        <p class="cost"><b>What it costs you:</b> customer trust, and possibly legal trouble if personal data leaks.</p>
+      </article>
+      <article class="risk">
+        <h3>Your business lives inside one platform</h3>
+        <p class="looks">Hosting, database and the tool you fix bugs with all sit in one account you don't control. On Lovable, your live app and your next fix are paid from the same credits. On Bubble, you never get the code.</p>
+        <p class="cost"><b>What it costs you:</b> prices, limits and rules can change, and you can't simply pick up and leave.</p>
+      </article>
+      <article class="risk">
+        <h3>Your secret keys are visible</h3>
+        <p class="looks">The keys to your database, payments or email service sit in code that anyone curious enough can read.</p>
+        <p class="cost"><b>What it costs you:</b> someone else can run up your bills or read your data.</p>
+      </article>
+      <article class="risk">
+        <h3>There's no real way back</h3>
+        <p class="looks">A bad change, by you or by the AI, deletes or scrambles data. Nobody has ever tested restoring it.</p>
+        <p class="cost"><b>What it costs you:</b> you find out the day you need it.</p>
+      </article>
+      <article class="risk">
+        <h3>It breaks when people actually show up</h3>
+        <p class="looks">Fine with ten test users, slow or failing at five hundred. Emails don't arrive. Payments go through, but the order never appears.</p>
+        <p class="cost"><b>What it costs you:</b> lost sign-ups on the day that matters most.</p>
+      </article>
+      <article class="risk">
+        <h3>Every fix breaks something else</h3>
+        <p class="looks">The app has grown past what the AI tool can keep track of. You spend more on repairs than on new features.</p>
+        <p class="cost"><b>What it costs you:</b> progress stalls, and so does your runway.</p>
+      </article>
     </div>
   </div>
 </section>
 
 <main class="wrap section" id="services">
-  <h2>Three ways I can help</h2>
-  <p class="intro">Start with the readiness check. It's short, fixed-price and tells you exactly what's risky before you spend more.</p>
+  <h2>What I do about it</h2>
+  <p class="intro">Three steps. Most founders only need the first one or two. Each comes with a fixed price before any work starts.</p>
 
   <section class="service" id="check" aria-labelledby="h-check">
     <div>
-      <span class="tag">Start here</span>
-      <h3 id="h-check">Production readiness check</h3>
-      <p class="what">A careful look at your app before real users do: who can see what, where data is exposed and what breaks when something goes wrong.</p>
-      <p class="fit"><b>Good fit if</b> you're about to launch, take payments or store customer data, and nobody has reviewed the app yet.</p>
+      <span class="tag">Step 1</span>
+      <h3 id="h-check">Health check</h3>
+      <p class="what">Is my app safe to launch? I go through it the way a curious user, and someone trying to break in, would.</p>
+      <p class="fit"><b>Good fit if</b> you're about to launch, take payments or collect customer data, and nobody technical has looked at the app yet.</p>
     </div>
     <div class="tablebox">
       <table>
-        <thead><tr><th scope="col">Option</th><th scope="col">What's included</th><th scope="col">Time</th><th scope="col">Pricing</th></tr></thead>
+        <thead><tr><th scope="col">Option</th><th scope="col">What you get</th><th scope="col">Time</th><th scope="col">Price</th></tr></thead>
         <tbody>
           <tr class="rec">
-            <td class="opt"><b>Readiness check</b><small>Know your risks</small><span class="rec-badge">Recommended</span></td>
-            <td><ul class="inc"><li>Permission checks on every page and API</li><li>Database access rules and secrets</li><li>Sign-up and payment paths tested</li><li>Written top-10 risk list, with a fixed price to fix each</li></ul></td>
+            <td class="opt"><b>Health check</b><small>Know where you stand</small><span class="rec-badge">Start here</span></td>
+            <td><ul class="inc"><li>I try to see data I shouldn't be able to see</li><li>I look for exposed keys and passwords</li><li>I test sign-up and payment like a real customer</li><li>A plain-English report: what's wrong, how serious it is, and a fixed price to fix each item</li></ul></td>
             <td class="time">3 working days</td>
-            <td class="price"><b>From $300</b><a class="js-mail" href="mailto:shakilmahmud012@gmail.com?subject=Readiness%20check">Ask about this</a></td>
+            <td class="price"><b>From $300</b><a class="js-mail" href="mailto:shakilmahmud012@gmail.com?subject=Health%20check">Ask about this</a></td>
           </tr>
           <tr>
-            <td class="opt"><b>Retest</b><small>After your fixes</small></td>
-            <td><ul class="inc"><li>Every risk from the check tested again</li><li>Short written sign-off you can share</li></ul></td>
+            <td class="opt"><b>Recheck</b><small>After the fixes</small></td>
+            <td><ul class="inc"><li>Every problem from the report tested again</li><li>A short sign-off you can show investors or customers</li></ul></td>
             <td class="time">1 to 2 days</td>
-            <td class="price"><b>Fixed quote</b><a class="js-mail" href="mailto:shakilmahmud012@gmail.com?subject=Retest%20after%20fixes">Ask about this</a></td>
+            <td class="price"><b>Fixed quote</b><a class="js-mail" href="mailto:shakilmahmud012@gmail.com?subject=Recheck">Ask about this</a></td>
           </tr>
         </tbody>
       </table>
     </div>
   </section>
 
-  <section class="service" id="harden" aria-labelledby="h-harden">
+  <section class="service" id="fix" aria-labelledby="h-fix">
     <div>
-      <span class="tag">Fix and protect</span>
-      <h3 id="h-harden">Hardening sprint</h3>
-      <p class="what">The fixes that turn a demo into a product: safe sign-in, protected data, tests where money moves, and deployments you can trust.</p>
-      <p class="fit"><b>Good fit if</b> every change breaks something else, or you need the app solid before a launch or a customer pilot.</p>
+      <span class="tag">Step 2</span>
+      <h3 id="h-fix">Fix it properly</h3>
+      <p class="what">The work that turns a demo into a product you can sell: each customer sees only their own data, money is handled safely, and changes stop breaking things.</p>
+      <p class="fit"><b>Good fit if</b> the health check found serious problems, or every change you make breaks something else.</p>
     </div>
     <div class="tablebox">
       <table>
-        <thead><tr><th scope="col">Option</th><th scope="col">What's included</th><th scope="col">Time</th><th scope="col">Pricing</th></tr></thead>
+        <thead><tr><th scope="col">Option</th><th scope="col">What you get</th><th scope="col">Time</th><th scope="col">Price</th></tr></thead>
         <tbody>
           <tr class="rec">
-            <td class="opt"><b>Hardening sprint</b><small>Fix and protect</small><span class="rec-badge">Recommended</span></td>
-            <td><ul class="inc"><li>Sign-in and permissions on every endpoint</li><li>Server-side validation, secrets out of the code</li><li>Tests on sign-up, payments and your core workflow</li><li>Error logging, backups and safer deploys</li></ul></td>
+            <td class="opt"><b>Fix sprint</b><small>Make it solid</small><span class="rec-badge">Most useful</span></td>
+            <td><ul class="inc"><li>Every problem from the health check closed</li><li>Each customer sees only their own data</li><li>Automatic checks so new changes can't quietly break sign-up or payments</li><li>Backups that are tested, and alerts when something fails</li></ul></td>
             <td class="time">2 to 3 weeks</td>
-            <td class="price"><b>From $2,000</b><a class="js-mail" href="mailto:shakilmahmud012@gmail.com?subject=Hardening%20sprint">Ask about this</a></td>
+            <td class="price"><b>From $2,000</b><a class="js-mail" href="mailto:shakilmahmud012@gmail.com?subject=Fix%20sprint">Ask about this</a></td>
           </tr>
           <tr>
-            <td class="opt"><b>Part-time senior engineer</b><small>After launch</small></td>
-            <td><ul class="inc"><li>New features without breaking old ones</li><li>Review of AI-written changes before they ship</li><li>Weekly call and written update</li></ul></td>
+            <td class="opt"><b>Your part-time engineer</b><small>After launch</small></td>
+            <td><ul class="inc"><li>New features without breaking old ones</li><li>I review AI-made changes before customers see them</li><li>A weekly call and a short written update</li></ul></td>
             <td class="time">Monthly</td>
-            <td class="price"><b>Monthly plan</b><a class="js-mail" href="mailto:shakilmahmud012@gmail.com?subject=Part-time%20senior%20engineer">Ask about this</a></td>
+            <td class="price"><b>Monthly plan</b><a class="js-mail" href="mailto:shakilmahmud012@gmail.com?subject=Part-time%20engineer">Ask about this</a></td>
           </tr>
         </tbody>
       </table>
     </div>
   </section>
 
-  <section class="service" id="exit" aria-labelledby="h-exit">
+  <section class="service" id="own" aria-labelledby="h-own">
     <div>
-      <span class="tag">Own it</span>
-      <h3 id="h-exit">Platform exit</h3>
-      <p class="what">Move to code, a database and hosting you control, in planned steps, so users barely notice. For example, from Lovable Cloud to your own Supabase or PostgreSQL, or from Bubble to a real codebase.</p>
-      <p class="fit"><b>Good fit if</b> platform costs or limits block your roadmap, or investors want to see code and data you fully own. Some moves need care: Lovable Cloud passwords can't be exported, so the plan covers how users keep access.</p>
+      <span class="tag">Step 3</span>
+      <h3 id="h-own">Make it yours</h3>
+      <p class="what">Move your app to accounts you own: your code in your GitHub, your database in your account, hosting you choose. Customers keep using the app while we move.</p>
+      <p class="fit"><b>Good fit if</b> platform costs or limits are blocking your plans, or investors ask who owns the technology. Not every app needs to move. The health check tells you honestly.</p>
     </div>
     <div class="tablebox">
       <table>
-        <thead><tr><th scope="col">Option</th><th scope="col">What's included</th><th scope="col">Time</th><th scope="col">Pricing</th></tr></thead>
+        <thead><tr><th scope="col">Option</th><th scope="col">What you get</th><th scope="col">Time</th><th scope="col">Price</th></tr></thead>
         <tbody>
           <tr class="rec">
-            <td class="opt"><b>Exit plan</b><small>Know the path</small><span class="rec-badge">Recommended</span></td>
-            <td><ul class="inc"><li>What moves, in what order, and what stays</li><li>How users, files and payments come across</li><li>Cost and risk for each step</li></ul></td>
+            <td class="opt"><b>Moving plan</b><small>Know the path</small><span class="rec-badge">Start here</span></td>
+            <td><ul class="inc"><li>What moves, in what order, and what can stay</li><li>How customers keep their accounts and files</li><li>What it costs, step by step</li></ul></td>
             <td class="time">About 1 week</td>
-            <td class="price"><b>From $500</b><a class="js-mail" href="mailto:shakilmahmud012@gmail.com?subject=Platform%20exit%20plan">Ask about this</a></td>
+            <td class="price"><b>From $500</b><a class="js-mail" href="mailto:shakilmahmud012@gmail.com?subject=Moving%20plan">Ask about this</a></td>
           </tr>
           <tr>
-            <td class="opt"><b>Migration</b><small>Step by step</small></td>
-            <td><ul class="inc"><li>Data moved and checked against the original</li><li>Code in your own GitHub repository</li><li>Switch-over plan with a way back</li></ul></td>
-            <td class="time">By phase</td>
-            <td class="price"><b>Fixed quote</b><a class="js-mail" href="mailto:shakilmahmud012@gmail.com?subject=Platform%20migration">Ask about this</a></td>
+            <td class="opt"><b>The move</b><small>Step by step</small></td>
+            <td><ul class="inc"><li>Data moved and checked against the original</li><li>Everything in accounts you own</li><li>A way back if anything goes wrong on switch-over day</li></ul></td>
+            <td class="time">By step</td>
+            <td class="price"><b>Fixed quote</b><a class="js-mail" href="mailto:shakilmahmud012@gmail.com?subject=Moving%20my%20app">Ask about this</a></td>
           </tr>
         </tbody>
       </table>
@@ -312,20 +373,34 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-s
   </section>
 </main>
 
-<section class="band" id="how">
+<section class="band" id="faq">
   <div class="wrap section">
-    <h2>How it works</h2>
-    <ol class="howto">
-      <li><b>Send the app</b><p>A link, what it's built with and what worries you. A short screen recording helps.</p></li>
-      <li><b>Get a fixed quote</b><p>Scope, price and timeline in writing within two working days.</p></li>
-      <li><b>Work in the open</b><p>I work in your repository with access you can revoke. Written updates and a weekly call.</p></li>
-      <li><b>Handover</b><p>Everything in your accounts, with plain-language notes and a walkthrough.</p></li>
-    </ol>
-    <div class="terms">
-      <div><b>You own everything</b><p>Code, data, accounts and hosting stay yours. An NDA is available before you share anything.</p></div>
-      <div><b>Payment</b><p>Fixed-price work is 50% upfront and 50% on delivery. Work over $2,000 can use milestones.</p></div>
-      <div><b>Changes</b><p>Extra work is approved by you before it starts. One round of revisions within 14 days of delivery.</p></div>
-      <div><b>Time zones</b><p>Based in Dhaka, with a weekly call set around your time zone in the US, UK or Canada.</p></div>
+    <h2>Questions founders ask</h2>
+    <div class="faq">
+      <details>
+        <summary>I'm not technical. Will I understand what you find?</summary>
+        <p>Yes. Every problem is explained in plain words: what it is, what could happen to your business, and what it costs to fix. Technical notes are added for whoever does the fixing.</p>
+      </details>
+      <details open>
+        <summary>What happens to my app if I stop paying the platform?</summary>
+        <p>It depends on the platform. On Lovable, your published site stays online and your code and data are kept, but some features stop on the free plan, and hosting and the built-in backend draw on the same credits you build with. On Bubble, moving to the free plan switches off your custom domain and blocks data export until you upgrade again. Either way, you depend on rules you don't set. The moving plan shows exactly where you stand.</p>
+      </details>
+      <details>
+        <summary>Do I have to leave Lovable, Bubble or the tool I used?</summary>
+        <p>No. Many apps are fine where they are once the gaps are fixed. If moving isn't worth it for you, I'll say so.</p>
+      </details>
+      <details>
+        <summary>Will my app go offline while you work on it?</summary>
+        <p>No. I work on a copy first and switch over only when it's tested and you've approved it.</p>
+      </details>
+      <details>
+        <summary>Who owns the code and the data?</summary>
+        <p>You do, always. I work in your accounts with access you can remove at any time. An NDA is available before you share anything.</p>
+      </details>
+      <details>
+        <summary>How do we start?</summary>
+        <p>Send the app link, what it's built with and what worries you. I reply within one working day, and you get a fixed quote in writing within two working days. Fixed-price work is 50% upfront and 50% on delivery.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -345,13 +420,13 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-s
   <section class="contact" id="contact" aria-labelledby="h-contact">
     <div>
       <h2 id="h-contact">Tell me about your app</h2>
-      <p>Send the link, what it's built with and what's worrying you. Two or three sentences is enough. I reply within one working day with next steps.</p>
+      <p>The link, what it's built with and what's worrying you. Two or three sentences is enough. I reply within one working day.</p>
     </div>
     <div class="btns">
-      <a class="btn btn-amber js-mail" href="mailto:shakilmahmud012@gmail.com?subject=AI-built%20app%20review&amp;body=App%20link%3A%20%0ABuilt%20with%3A%20%0AWhat%20it%20does%3A%20%0AWhat%20worries%20me%3A%20">Send a message</a>
+      <a class="btn btn-amber js-mail" href="mailto:shakilmahmud012@gmail.com?subject=AI-built%20app%20check&amp;body=App%20link%3A%20%0ABuilt%20with%3A%20%0AWhat%20it%20does%3A%20%0AWhat%20worries%20me%3A%20">Send a message</a>
       <a class="btn btn-light" href="https://wa.me/8801743601756"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.3z"/><path d="M9 8.5c0 3.5 2.6 6.5 6.5 6.5l1-1.6-2-1-1 1c-1.2-.4-2.4-1.6-2.8-2.8l1-1-1-2L9 8.5z"/></svg>Chat on WhatsApp</a>
       <p class="mailline">Or write to <a href="mailto:shakilmahmud012@gmail.com">shakilmahmud012@gmail.com</a><br>
-        <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=shakilmahmud012@gmail.com&amp;su=AI-built%20app%20review">Open in Gmail</a> · <button type="button" id="copy-mail">Copy address</button></p>
+        <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=shakilmahmud012@gmail.com&amp;su=AI-built%20app%20check">Open in Gmail</a> · <button type="button" id="copy-mail">Copy address</button></p>
     </div>
   </section>
 
@@ -361,7 +436,14 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-s
   </footer>
 </div>
 
+<a class="totop" id="totop" href="#top" aria-label="Back to top"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg></a>
+
 <script>
+(function(){
+  var bar=document.getElementById('topbar'), up=document.getElementById('totop');
+  function onScroll(){var y=window.scrollY||document.documentElement.scrollTop;bar.classList.toggle('scrolled',y>8);up.classList.toggle('show',y>600);}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+})();
 (function(){
   var btn=document.getElementById('copy-mail');
   if(!btn) return;
